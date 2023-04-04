@@ -1,24 +1,16 @@
 .container {
     display: flex;
-    background-color: #042940;
-    color: white;
-    justify-content: right;
+    border: 1px solid red;
+    background-color: beige;
+    height: 50px;
+    color: brown;
+    justify-content: right;  
 
-    a{
-        margin: 10px 10px;
-        color: #9FC131; 
-        font-size: 20px;
-        background: none;
-        
-
-        &:hover {
-            color: #DBF227;
-            transition: 0.5s;
-            transform: scaleX(1.2);
-        }
-        
-            
-
-    } 
+    a {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+   
 } 
 

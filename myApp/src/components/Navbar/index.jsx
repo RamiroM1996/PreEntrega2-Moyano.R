@@ -1,15 +1,27 @@
-import CartWidget from "../CartWidget";
-import styles from "./navbar.module.scss"; 
+import React from 'react'
+import { NavLink} from "react-router-dom";
+import styles from "./navbar.module.scss";
+import { ImCart } from 'react-icons/im';
 
-const Navbar = () => {
+
+const NavBar = () => {
+
+  const activeStyle = {
+    color: "violet",
+  }
   return (
-    <div className= {styles.container}>
-        <a>Home</a>
-        <a>About</a>
-        <a>Contact</a>
-       <CartWidget/>
-    </div>
-  );
-};
+    <nav className= {styles.container}>
+        <NavLink to="/home" style={({isActive}) => (isActive ? activeStyle : undefined)} >
+        <p>Home</p>
+        </NavLink>
+        <NavLink to="/products" style={({isActive}) => (isActive ? activeStyle : undefined)} >
+        <p>Products</p>
+        </NavLink>
+        <NavLink to="/cart" style={({isActive}) => (isActive ? activeStyle : undefined)} >
+        <ImCart />
+        </NavLink>
+      </nav>
+  )
+}
 
-export default Navbar
+export default NavBar
